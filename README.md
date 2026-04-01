@@ -1,1 +1,1 @@
-//para mo start ang server ibutang sa terminal http-server//
+index.html
