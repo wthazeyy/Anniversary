@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Anniversary</title>
+    <link rel="stylesheet" href="design.css">
+</head>
+<body>
+    <!-- Passcode Entry Screen -->
+    <div id="passcode-screen" class="screen active">
+        <div class="floating-hearts"></div>
+        
+        <div class="passcode-container">
+            <div class="lock-icon">🔒</div>
+            <h1>Welcome, My Love</h1>
+            <p>Enter our special date to unlock your surprise</p>
+            
+            <div class="passcode-display">
+                <div class="dot" id="dot1"></div>
+                <div class="dot" id="dot2"></div>
+                <div class="dot" id="dot3"></div>
+                <div class="dot" id="dot4"></div>
+                <div class="dot" id="dot5"></div>
+                <div class="dot" id="dot6"></div>
+            </div>
+            
+            <div id="hint" class="hint hidden">💕 Hint: The day you said YES! (MMDDYY)</div>
+            
+            <div class="keypad">
+                <button class="key" onclick="addDigit('1')">1</button>
+                <button class="key" onclick="addDigit('2')">2</button>
+                <button class="key" onclick="addDigit('3')">3</button>
+                <button class="key" onclick="addDigit('4')">4</button>
+                <button class="key" onclick="addDigit('5')">5</button>
+                <button class="key" onclick="addDigit('6')">6</button>
+                <button class="key" onclick="addDigit('7')">7</button>
+                <button class="key" onclick="addDigit('8')">8</button>
+                <button class="key" onclick="addDigit('9')">9</button>
+                <button class="key clear" onclick="clearPasscode()">Clear</button>
+                <button class="key" onclick="addDigit('0')">0</button>
+                <button class="key submit" onclick="checkPasscode()">💖</button>
+            </div>
+            
+            <div class="love-message">Made with 💕 for the most amazing person in my world</div>
+        </div>
+    </div>
+
+    <!-- Digital Scrapbook Screen -->
+    <div id="scrapbook-screen" class="screen">
+        <div class="floating-elements"></div>
+        
+        <header class="scrapbook-header">
+            <h1>Our Love Garden</h1>
+            <p>A collection of everything I love about us</p>
+            <div class="time-together">
+                <span>📅 Together for <span id="time-elapsed">calculating...</span></span>
+            </div>
+        </header>
+
+        <div class="scrapbook-items">
+            <div class="scrapbook-item photos" onclick="openSection('photos')">
+                <div class="item-icon">📸</div>
+                <h3>Our Memories</h3>
+                <p>Click to explore</p>
+            </div>
+            
+            <div class="scrapbook-item timeline" onclick="openSection('timeline')">
+                <div class="item-icon">⏰</div>
+                <h3>Time Together</h3>
+                <p>Click to explore</p>
+            </div>
+            
+            <div class="scrapbook-item letter" onclick="openSection('letter')">
+                <div class="item-icon">💌</div>
+                <h3>Love Letter</h3>
+                <p>Click to explore</p>
+            </div>
+            
+            <div class="scrapbook-item music" onclick="openSection('music')">
+                <div class="item-icon">🎵</div>
+                <h3>Our Song</h3>
+                <p>Click to explore</p>
+            </div>
+        </div>
+
+        <div class="bottom-message">
+            "Click on each memory to explore our beautiful story" 💕
+        </div>
+    </div>
+
+    <!-- Modal for sections -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <div id="modal-body"></div>
+        </div>
+    </div>
+
+    <script src="utok.js"></script>
+</body>
+</html>
